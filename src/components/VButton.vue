@@ -42,6 +42,11 @@
         font-weight: $font-weight-light;
         color: $color-dark;
 
+        &:focus {
+            outline: solid $line-width $color-yellow;
+            transition: 0.15s;
+        }
+
         &.highlighted {
             background-color: $color-yellow;
         }

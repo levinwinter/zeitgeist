@@ -5,6 +5,7 @@
                 Jetzt kannst du dir deine Kombination zusammenklicken. Los geht's!<br>Sobald du fertig bist klicke am Ende der Seite auf den Button.
             </floating-card-text>
         </floating-card>
+        <choice-composer></choice-composer>
         <floating-card>
             <floating-card-text>
                 Deine Kombination ist perfekt!
@@ -19,10 +20,12 @@
     import FloatingCard from "@/components/FloatingCard/FloatingCard";
     import FloatingCardText from "@/components/FloatingCard/FloatingCardText";
     import FloatingCardButton from "@/components/FloatingCard/FloatingCardButton";
+    import ChoiceComposer from "@/components/ChoiceComposer/ChoiceComposer";
 
     export default {
         name: 'Home',
         components: {
+            ChoiceComposer,
             FloatingCardButton,
             FloatingCardText,
             FloatingCard

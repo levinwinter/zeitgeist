@@ -13,15 +13,6 @@
 <style lang="scss" scoped>
     .floating-card {
         margin: $standard-margin;
-
         outline: solid $line-width $color-dark;
-    }
-
-    .card .button {
-        padding: var(--card-text-padding);
-
-        text-align: right;
-
-        outline: solid var(--outline-width) var(--color-dark);
     }
 </style>

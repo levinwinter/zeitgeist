@@ -1,22 +1,23 @@
 <template>
     <div class="choice-composer-category">
-        <h2>{{categoryData.categoryName}}</h2>
-        <choice-composer-subject
-                v-for="subject in categoryData.subjects"
-                :key="subject.abbreviation"
-                :subject-data="subject"
-        ></choice-composer-subject>
+        <h2>{{category.name + " " + this.$customThing}}</h2>
+        <choice-composer-field
+                v-for="field in category.fields"
+                :key="field.name"
+                :field="field"
+        ></choice-composer-field>
     </div>
 </template>
 
 <script>
-    import ChoiceComposerSubject from "@/components/ChoiceComposer/ChoiceComposerSubject";
+    import ChoiceComposerField from "@/components/ChoiceComposer/ChoiceComposerField";
+    import {Category} from "@/models/category";
     export default {
         name: "ChoiceComposerCategory",
-        components: {ChoiceComposerSubject},
+        components: { ChoiceComposerField },
         props: {
-            categoryData: {
-                type: Object,
+            category: {
+                type: Category,
                 required: true
             }
         }

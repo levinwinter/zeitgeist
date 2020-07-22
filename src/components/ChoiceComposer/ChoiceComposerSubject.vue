@@ -1,9 +1,9 @@
 <template>
     <div class="choice-composer-subject">
         <!--TODO implement proper state management-->
-        <choice-composer-button :state="subjectData.asMajor ? 'default' : 'forbidden'">LK</choice-composer-button>
-        <choice-composer-button :state="subjectData.asMinor ? 'default' : 'forbidden'">GK</choice-composer-button>
-        <p>{{subjectData.name}}</p>
+        <choice-composer-button :state="subject.asMajor ? 'default' : 'forbidden'">LK</choice-composer-button>
+        <choice-composer-button :state="subject.asMinor ? 'default' : 'forbidden'">GK</choice-composer-button>
+        <p>{{subject.name}}</p>
         <div class="background shadow"></div>
     </div>
 </template>
@@ -12,11 +12,9 @@
     import ChoiceComposerButton from "@/components/ChoiceComposer/ChoiceComposerButton";
     export default {
         name: "ChoiceComposerSubject",
-        components: {
-            ChoiceComposerButton
-        },
+        components: { ChoiceComposerButton },
         props: {
-            subjectData: {
+            subject: {
                 type: Object,
                 required: true
             }
